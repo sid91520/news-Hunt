@@ -118,30 +118,35 @@ export class Multiitem extends Component {
         "publishedAt": "2020-04-27T07:20:43Z",
         "content": "Why do a cat, a footballer, a Nobel laureate and a prime minister find themselves in the ESPNcricinfo database? Here are six player profiles you wouldn't have expected we had.\r\nPeter the catThe only … [+5504 chars]"
         }]
-    constructor(){
+    constructor() {
         super();
-        this.state={
-            articles:this.articles
-        }
+        this.state = {
+            articles: this.articles
+        };
     }
     render() {
-    return (
-      <div>
-        <div className="container">
-            <h1 style={{color:"White"}}><b><i>NewsHunt</i></b>- Top Headlines</h1>
-          <div className="row">
-          {this.articles.map((elements)=>{
-                return <div className="col-md-4 my-3" key={elements.url}>
-                <Content title={elements.title.slice(0,90)} description={elements.description.slice(0,75)}
-                  image={elements.urlToImage} newsurl={elements.url} />
-              </div>
-            })}
-              
+        return (
+            <div>
+                <div className="container">
+                    <h1 style={{ color: "White" }}><b><i>NewsHunt</i></b>- Top Headlines</h1>
+                    <div className="row">
+                        {this.state.articles.map((article) => {
+                            return (
+                                <div className="col-md-4 my-3" key={article.url}>
+                                    <Content
+                                        title={article.title.slice(0, 90)}
+                                        description={article.description.slice(0, 75)}
+                                        image={article.urlToImage}
+                                        newsurl={article.url}  
+                                       />
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
-            </div>
-      </div>
-    )
-  }
+        );
+    }
 }
 
-export default Multiitem
+export default Multiitem;
