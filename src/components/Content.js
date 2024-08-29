@@ -7,7 +7,7 @@ export class Content extends Component {
       <div>
         <div className="container">
         <div className="card" style={{width: "18rem",height:"40%"}}>
-  <img src={image} className="card-img-top" alt="..."/>
+  <img src={!image?"https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg":image} className="card-img-top" alt="" />
   <div className="card-body">
     <h5 className="card-title">{title}</h5>
     <p className="card-text">{description}</p>
