@@ -1,6 +1,9 @@
-body,html{
-    background-image:url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTYtYy0wMi1rc2g2cWt1Zy5qcGc.jpg");
+body, html {
+  height: 100%; /* Ensure the body and html take full height */
+  background-image: url("https://img.freepik.com/free-photo/anime-style-galaxy-background_23-2151133974.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;    
+  background-size: cover; /* Use cover to fill the background */
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-color: #000; /* Optional: Set a fallback background color */
 }

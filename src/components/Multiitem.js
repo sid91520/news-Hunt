@@ -51,7 +51,7 @@ export class Multiitem extends Component {
         return (
             <div>
                 <div className="container">
-                    <h1 style={{ color: "black" }}><b><i>NewsHunt</i></b>- Top Headlines</h1>
+                    <h1 style={{ color: "white" }}><b><i>NewsHunt</i></b>- Top Headlines</h1>
                     <div className="row">
                         {this.state.articles.map((elements) => {
              return (
